@@ -1,0 +1,260 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5;
+}
+
+header {
+    background-color: #1F3B4D;
+    color: #fff;
+    padding: 4em;
+    text-align: center;
+    position: relative;
+}
+
+main {
+    flex: 1;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 4em;
+}
+
+#proposeMangaBtn {
+    padding: 0.5em 1em;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    width: 15em;
+    background-color: #E94560; 
+    color: #000; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); 
+    border-radius: 5px; 
+    position: relative;
+    top: -1.3em; 
+    left: 50%;
+    transform: translateX(-50%); 
+    transition: transform 0.2s ease; 
+}
+
+#proposeMangaBtn:hover {
+    transform: translateX(-50%) scale(1.05); 
+    border: 3px solid #1F3B4D;
+}
+
+.manga-list {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+    gap: 9em;
+}
+
+
+.manga-list article {
+    padding: 1em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.manga-list article a img {
+    width: 290px;
+    height: 400px; 
+    object-fit: cover; 
+    border-radius: 5px; 
+    transition: transform 0.2s; 
+}
+
+.manga-list article a:hover img {
+    transform: scale(1.08); 
+    border: 3px solid #1F3B4D;
+}
+
+
+.title-box {
+    margin-top: 1em;
+    background-color: #1F3B4D; 
+    color: white;
+    padding: 0.3em 0.5em; 
+    border-radius: 15px;
+    text-align: center;
+    width: 60%; 
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+footer {
+    background-color: #1F3B4D;
+    color: #fff;
+    text-align: center;
+    padding: 0.2em;
+    width: 100%;
+}
+
+#proposeMangaModal {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-header {
+    width: 500px;
+    background-color: #1F3B4D;
+    color: #fff;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+
+/* Style pour les labels et les champs de saisie */
+#proposeMangaForm label {
+    font-weight: bold;
+    margin-bottom: 0.2em;
+}
+
+#proposeMangaForm input[type="text"],
+#proposeMangaForm input[type="email"] {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-content {
+    background-color: #F5F5F5;
+    padding: 2em;
+    width: 500px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 1em; /* Espacement entre les éléments */
+    align-items: center;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 1em; /* Espace entre les deux boutons */
+    justify-content: center; /* Centre les boutons horizontalement */
+    width: 100%; /* S'assure que les boutons prennent toute la largeur du conteneur */
+    margin-top: 1em;
+}
+
+/* Style des boutons du formulaire */
+.submit-button, .cancel-button {
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    width: 8em;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: transform 0.2s ease;
+}
+
+/* Couleurs spécifiques aux boutons */
+.submit-button {
+    background-color: #E94560;
+    color:#000; 
+}
+
+.cancel-button {
+    background-color: #1F3B4D;
+    color: #fff;
+}
+
+/* Effet au survol */
+.submit-button:hover {
+    transform: scale(1.05);
+    border: 3px solid #1F3B4D;
+}
+
+.cancel-button:hover {
+    transform: scale(1.05);
+    border: 3px solid #E94560;
+}
+
+.one-piece-content {
+    padding: 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.image-text-container {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.image-text-container img {
+    width: 500px;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.description {
+    flex: 1;
+    padding: 0.5em;
+    background-color: #F5F5F5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1.5em;
+}
+
+.detailed-description {
+    padding: 0.5em;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1.3em;
+}
+
+.back-button {
+    padding: 0.5em 1em;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    width: 8em;
+    background-color: #E94560; 
+    color: #000; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); 
+    border-radius: 5px; 
+    transform: translateX(-50%); 
+    transition: transform 0.2s ease; 
+}
+
+.back-button:hover {
+    transform: translateX(-50%) scale(1.05); 
+    border: 3px solid #FFFF;
+}
+
+.error-message {
+    color: #E94560;
+    font-size: 0.9em;
+    margin-top: 0.2em;
+    display: block;
+    height: 1em; 
+}
